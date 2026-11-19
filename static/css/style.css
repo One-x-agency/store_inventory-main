@@ -1,0 +1,297 @@
+body {
+  background-color: var(--light);
+}
+
+main {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+.modalInfo h1 {
+  text-align: center;
+}
+
+.mb-1r {
+  margin-bottom: 1rem;
+}
+
+.mr-1r {
+  margin-right: 1rem;
+}
+
+.ml-1r {
+  margin-left: 1rem;
+}
+
+.mb-05r {
+  margin-bottom: 0.5rem;
+}
+
+.mw-260 {
+  min-width: 240px;
+  max-width: 260px;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-container #searchInput {
+  width: 200px;
+  padding-right: 30px;
+  /* Adds padding to accommodate the clear button */
+}
+
+.search-container button {
+  margin-left: 0.5rem;
+}
+
+#clear-input {
+  position: absolute;
+  right: 8px;
+  /* Positions clear button inside input field */
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  z-index: 2;
+  color: var(--secondary);
+  cursor: pointer;
+  line-height: 1rem;
+  transition: 0.25s ease;
+  display: none;
+}
+
+#clear-input:hover {
+  background-color: #00000020;
+  color: #000;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-col button {
+  align-self: flex-start;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.control-container {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.control-container h2 {
+  font-size: 1rem;
+}
+
+.category-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.labelAndInput {
+  margin-right: 1rem;
+  width: fit-content;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--primary);
+}
+
+#sortMenu {
+  display: none;
+}
+
+#sortByBtn {
+  width: 174px;
+}
+
+.sort-by-item {
+  cursor: pointer;
+}
+
+.hover-rows:hover {
+  box-shadow: inset 0 0 0 0.125rem var(--primary);
+  cursor: pointer;
+}
+
+#table-container {
+  overflow-y: scroll;
+  background-color: #fff;
+  border-top-left-radius: 0.5rem;
+  overscroll-behavior-y: none;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  top: -1px;
+  background-color: #fff;
+}
+
+#productDetailsModal {
+  display: none;
+}
+
+#addProductModal {
+  display: none;
+}
+
+#underlayPD,
+#underlayAP {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #00000050;
+  z-index: 9;
+}
+
+.modalContent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1rem;
+  bottom: 1rem;
+  border-radius: 0.5rem;
+  max-width: 900px;
+  height: fit-content;
+  max-height: 97.5vh;
+  overflow-y: scroll;
+  margin: auto;
+  background-color: #fff;
+  z-index: 99;
+  box-shadow:
+    0px 0.8px 1px rgba(0, 0, 0, 0.039),
+    0px 1.9px 2.5px rgba(0, 0, 0, 0.057),
+    0px 3.5px 4.6px rgba(0, 0, 0, 0.07),
+    0px 6.3px 8.3px rgba(0, 0, 0, 0.083),
+    0px 11.7px 15.5px rgba(0, 0, 0, 0.101),
+    0px 28px 37px rgba(0, 0, 0, 0.14);
+}
+
+.modalInfo {
+  padding: 3rem;
+}
+
+.modal-block {
+  border: 2px solid var(--light);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.modalInfo h2 {
+  font-size: 1.5rem;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: fit-content;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  width: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 100;
+  padding: 0;
+  color: var(--secondary);
+}
+
+.closeButton:hover {
+  color: var(--primary);
+}
+
+.errorText {
+  color: var(--danger);
+  font-size: 0.625rem;
+  min-height: 30px;
+}
+
+.description {
+  resize: none;
+}
+
+#toast {
+  background-color: #9df79d;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translatex(-50%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  z-index: 999;
+  box-shadow:
+    0 0.9px 2.4px #00000007,
+    0 3.1px 6.2px #0000000b,
+    0 14px 20px #00000012;
+  border: 1px solid #00000020;
+  animation-name: toastAppear;
+  animation-duration: 3.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  display: none;
+}
+
+@keyframes toastAppear {
+  0% {
+    transform: translate(-50%, 15vh);
+    filter: opacity(0);
+  }
+
+  20% {
+    transform: translate(-50%, 1rem);
+    filter: opacity(1);
+  }
+
+  85% {
+    transform: translate(-50%, 1rem);
+    filter: opacity(1);
+  }
+
+  100% {
+    transform: translate(-50%, 1rem);
+    filter: opacity(0);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  main {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
